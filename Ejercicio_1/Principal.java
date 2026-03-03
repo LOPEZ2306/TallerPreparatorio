@@ -23,7 +23,7 @@ public class Principal {
         // Mostrar el inventario
         m.MostrarAlmacen(almacen);
 
-        // Búsqueda de producto por nombre
+        // Búsqueda del producto por nombre ingresado por el usuario
         System.out.print("\nIngrese el nombre del producto que desea buscar: ");
         String nombreABuscar = sc.next();
 

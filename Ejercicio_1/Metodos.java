@@ -3,7 +3,7 @@ package Ejercicio_1;
 import java.util.Scanner;
 
 public class Metodos {
-    
+
     Scanner sc = new Scanner(System.in);
 
     // Método para llenar la matriz de productos
@@ -26,25 +26,27 @@ public class Metodos {
         return almacen;
     }
 
-    // Método para buscar un producto por nombre y devolver su ubicación
+    // Método para buscar un producto por su nombre
     public String BuscarProducto(Producto[][] almacen, String nombreBuscado) {
         for (int i = 0; i < almacen.length; i++) {
             for (int j = 0; j < almacen[i].length; j++) {
                 if (almacen[i][j].getNombre().equalsIgnoreCase(nombreBuscado)) {
-                    return "El producto '" + nombreBuscado + "' se encuentra en la posición: Fila " + i + ", Columna " + j;
+                    return "El producto '" + nombreBuscado + "' se encuentra en la posición: Fila " + i + ", Columna "
+                            + j;
                 }
             }
         }
         return "Producto '" + nombreBuscado + "' no encontrado en el almacén.";
     }
 
-    // Método para mostrar todos los productos (opcional, basado en el ejemplo del usuario)
+    // Método para mostrar los productos de la matriz
     public void MostrarAlmacen(Producto[][] almacen) {
         System.out.println("\n--- Inventario del Almacén ---");
         for (int i = 0; i < almacen.length; i++) {
             for (int j = 0; j < almacen[i].length; j++) {
                 Producto p = almacen[i][j];
-                System.out.println("[" + i + "][" + j + "] - Nombre: " + p.getNombre() + ", Precio: " + p.getPrecio() + ", Cantidad: " + p.getCantidad());
+                System.out.println("[" + i + "][" + j + "] - Nombre: " + p.getNombre() + ", Precio: " + p.getPrecio()
+                        + ", Cantidad: " + p.getCantidad());
             }
         }
     }
